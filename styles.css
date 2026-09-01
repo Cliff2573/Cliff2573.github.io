@@ -235,6 +235,82 @@ a { color: inherit; }
 }
 .prose p:last-child { margin-bottom: 0; }
 
+
+/* ---------- Hero secondary text ---------- */
+
+.hero-sub {
+  max-width: 42em;
+  margin: 0.9rem 0 0;
+  color: var(--muted);
+  font-size: 1rem;
+}
+
+
+/* ---------- Quick facts ---------- */
+
+.quick-facts {
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background: var(--surface);
+}
+
+.quick-facts .section-inner {
+  max-width: var(--max-width);
+}
+
+.fact-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.fact-item {
+  padding: 1.8rem 1.4rem;
+  text-align: center;
+  border-right: 1px solid var(--line);
+}
+
+.fact-item:last-child {
+  border-right: none;
+}
+
+.fact-item strong {
+  display: block;
+  font-family: var(--serif);
+  color: var(--primary);
+  font-size: 1.45rem;
+  line-height: 1.3;
+  margin-bottom: 0.35rem;
+}
+
+.fact-item span {
+  display: block;
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+
+/* ---------- Tech stack tags ---------- */
+
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 1.2rem 0 0;
+}
+
+.tech-stack li {
+  padding: 0.28rem 0.65rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--primary);
+  background: var(--surface);
+  font-size: 0.82rem;
+  line-height: 1.4;
+}
+
 /* ---------- Timeline (experience) ---------- */
 .timeline {
   list-style: none;
@@ -366,6 +442,35 @@ a { color: inherit; }
     grid-template-columns: 1fr;
     gap: 0.3rem;
   }
+
+  .fact-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .fact-item:nth-child(2) {
+    border-right: none;
+  }
+
+  .fact-item:nth-child(-n + 2) {
+    border-bottom: 1px solid var(--line);
+  }
+}
+
+@media (max-width: 480px) {
+
+  .fact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .fact-item {
+    border-right: none;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .fact-item:last-child {
+    border-bottom: none;
+  }
+
 }
 
 /* ---------- Reduced motion ---------- */
