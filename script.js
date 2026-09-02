@@ -6,6 +6,7 @@ if (navToggle && siteNav) {
     const isOpen = siteNav.classList.toggle("open");
     navToggle.classList.toggle("open", isOpen);
     navToggle.setAttribute("aria-expanded", String(isOpen));
+    document.body.classList.toggle("nav-open", isOpen);
   });
 
   siteNav.querySelectorAll("a").forEach((link) => {
